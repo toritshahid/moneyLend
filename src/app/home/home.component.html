@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+  <br>
+  <mat-card class="card w-50">
+    <div class="outer d-flex justify-content-center">
+      <div class="dot d-flex justify-content-center">
+
+      </div>
+
+    </div>
+    <mat-form-field appearance="fill" class="w-100 " *ngIf="checkProceed==false">
+      <mat-label>Enter the Mobile Number</mat-label>
+      <input matInput placeholder="Mobile NUmber">
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-hint>Mobile Number</mat-hint>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100 " *ngIf="checkProceed">
+      <mat-label>Enter the 6 Digit OTP</mat-label>
+      <input matInput placeholder="OTP">
+      <mat-hint>OTP</mat-hint>
+    </mat-form-field>
+    <mat-card-footer *ngIf="checkProceed==false" class="d-flex justify-content-center">
+    <button class="btn btn-primary rounded" (click)="proceed()">Proceed</button>
+    </mat-card-footer>
+    <mat-card-footer *ngIf="checkProceed" class="d-flex justify-content-center">
+      <button class="btn btn-primary rounded" (click)="proceed()">Proceed</button>
+      </mat-card-footer>
+  </mat-card>
+</div>

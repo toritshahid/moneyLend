@@ -1,0 +1,18 @@
+.dot{
+  width: 100px;
+  height: 100px;
+  margin-top: 15%;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.outer{
+  max-width: 300px;
+  height: 200px;
+  background-color: gray;
+  justify-content: center;
+}
+.card {
+  margin-top: 10%;
+  max-width: 300px;
+  height: 400px;
+}
