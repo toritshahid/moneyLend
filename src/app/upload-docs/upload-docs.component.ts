@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { WebcamImage, WebcamInitError, WebcamUtil } from 'ngx-webcam';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-upload-docs',
@@ -8,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadDocsComponent implements OnInit {
 
+  uploadDocuments: boolean = true;
+  uploadPhoto: boolean = false;
 
-
-  ngOnInit(): void {
-  }
   fileName = '';
+  ngOnInit(): void {
+
+  }
 
     constructor(private http: HttpClient) {}
 
@@ -32,6 +36,24 @@ export class UploadDocsComponent implements OnInit {
 
             upload$.subscribe();
         }
+    }
+    uploadDocs(){
+      this.uploadDocuments=false;
+      this.uploadPhoto=true;
+    }
+    public webcamImage: any = null;
+    // webcam snapshot trigger
+    private trigger: Subject<void> = new Subject<void>();
+    triggerSnapshot(): void {
+     this.trigger.next();
+    }
+    handleImage(webcamImage: WebcamImage): void {
+     console.info('received webcam image', webcamImage);
+     this.webcamImage = webcamImage;
+    }
+
+    public get triggerObservable(): Observable<void> {
+     return this.trigger.asObservable();
     }
 
 }
