@@ -10,7 +10,7 @@ export class PersonalDetailsComponent implements OnInit {
 
   constructor() { }
   selectFormControl = new FormControl('', Validators.required);
-  gender = ['Mr.' ,'Mrs.', 'Miss', 'Other']
+
   ngOnInit(): void {
   }
 

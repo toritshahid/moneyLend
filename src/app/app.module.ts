@@ -15,13 +15,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UploadDocsComponent } from './upload-docs/upload-docs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WebcamModule } from 'ngx-webcam';
-
+import { NgxFileDragDropModule } from 'ngx-file-drag-drop';
+import { BankDetailsComponent } from './bank-details/bank-details.component';
+import { HeaderComponent } from './header/header.component';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PersonalDetailsComponent,
-    UploadDocsComponent
+    UploadDocsComponent,
+    BankDetailsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,8 @@ import { WebcamModule } from 'ngx-webcam';
     ReactiveFormsModule,
     HttpClientModule,
     WebcamModule,
+    NgxFileDragDropModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

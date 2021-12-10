@@ -22,7 +22,7 @@
     <button class="btn btn-primary rounded" (click)="proceed()">Proceed</button>
     </mat-card-footer>
     <mat-card-footer *ngIf="checkProceed" class="d-flex justify-content-center">
-      <button class="btn btn-primary rounded" (click)="proceed()">Proceed</button>
+      <button class="btn btn-primary rounded" [routerLink]="['/personalDetails']">Proceed</button>
       </mat-card-footer>
   </mat-card>
 </div>
