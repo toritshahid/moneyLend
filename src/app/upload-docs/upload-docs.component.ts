@@ -12,6 +12,8 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UploadDocsComponent implements OnInit {
   uploadDocuments: boolean = true;
+  uploadPersonal:boolean=true;
+  uploadIncome:boolean=false;
   uploadPhoto: boolean = false;
   public showWebcam = true;
   fileName = '';
@@ -22,6 +24,10 @@ export class UploadDocsComponent implements OnInit {
     [],
     [FileValidators.required, FileValidators.maxFileCount(1)]
   );
+  proceed(){
+    this.uploadPersonal=false;
+    this.uploadIncome =true;
+  }
 
   onValueChange(event: any) {
     const file: File = event.target.files[0];
@@ -36,6 +42,7 @@ export class UploadDocsComponent implements OnInit {
   uploadDocs() {
     this.uploadDocuments = false;
     this.uploadPhoto = true;
+    this.uploadIncome=false;
   }
   public webcamImage: any = null;
   // webcam snapshot trigger

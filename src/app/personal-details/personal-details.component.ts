@@ -9,9 +9,15 @@ import { FormControl, Validators } from '@angular/forms';
 export class PersonalDetailsComponent implements OnInit {
 
   constructor() { }
+  showPersonal: boolean=true;
+  showProfessional: boolean= false;
   selectFormControl = new FormControl('', Validators.required);
 
   ngOnInit(): void {
+  }
+  proceed(){
+    this.showPersonal=false;
+    this.showProfessional=true;
   }
 
 }

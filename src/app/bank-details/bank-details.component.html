@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center w-100" style="margin-top: 5%;">
-  <mat-card style="border-radius: 10px; width: 70%; justify-content: center;">
+<div class="d-flex justify-content-center" style="margin-top: 5%;">
+  <mat-card style="border-radius: 10px; width: 90%; justify-content: center;">
     <mat-card-title *ngIf="showLogin">Upload Bank Statement</mat-card-title>
     <div class="row" *ngIf="searchBank">
       <mat-card-title>Bank Details</mat-card-title>
@@ -45,7 +45,7 @@
       <div class="d-flex justify-content-center">
         <div class="row " style="width: 100%;">
           <mat-card-title style="margin-left: 48%;margin-top: 20px;">OR</mat-card-title>
-          <mat-label style="margin-left: 40%;">Upload Six Months Statement</mat-label><br>
+          <mat-label style="margin-left: 30%;">Upload Six Months Statement</mat-label><br>
 
           <ngx-file-drag-drop [formControl]="fileControl" activeBorderColor="#3F51B5" style="width: 100%;"
             (valueChanged)="onValueChange($event)">
@@ -66,10 +66,10 @@
       <div class="d-flex justify-content-center">
         <mat-card style="background-color: gray;color: white; border-radius: 10px;">
           <div class="row justify-content-center">
-            <div class="col-5 col-sm-5 col-md-5 col-xl-5">
-              <mat-card-title style="font-weight: 700; font-size: medium;">Available Limit</mat-card-title>
+            <div class="col-5 col-sm col-md-5 col-xl-5">
+              <mat-card-title style="font-weight: 700; font-size:medium;">Available Limit</mat-card-title>
             </div>
-            <div class="col-5 col-sm-5 col-md-5 col-xl-5">
+            <div class="col-5 col-sm col-md-5 col-xl-5">
               <mat-card-title style="font-weight: 700; font-size: medium;"> <span
                   style="font-weight: 700; font-size:xx-large;">4,50,000</span></mat-card-title>
             </div>
@@ -79,11 +79,11 @@
                   style="margin-left: 20px;">****</span><span style="margin-left: 20px;">9464</span></mat-card-subtitle>
             </div>
             <div class="row" style="margin-left: 10%;">
-              <div class="col-7 col-sm-7 col-md-7 col-xl-7">
+              <div class="col-7 col-sm col-md-7 col-xl-7">
                 <mat-card-subtitle style="font-weight: 700; font-size: medium;  color: white;"><span>10/09</span>
                 </mat-card-subtitle>
               </div>
-              <div class="col-3 col-sm-3 col-md-3 col-xl-3">
+              <div class="col-3 col-sm col-md-3 col-xl-3">
                 <mat-card-subtitle style="font-weight: 700; font-size: medium; margin-left: 15%; color: white;">
                   <span>***</span><span style="margin-left: 5%;">
                     <mat-slide-toggle></mat-slide-toggle>
@@ -98,12 +98,12 @@
       <div class="d-flex justify-content-center">
 
         <div class="col-9 col-sm col-md-9 col-xl-9 ">
-          <h3 style="font-weight: bold; font-size: x-large; margin-left: 10%;">Approved Limit</h3>
-          <h3 style="font-weight: bolder; font-size: xx-large; margin-left: 10%;">5,00,000</h3>
+          <h3 style="font-weight: bold; font-size: medium; margin-left: 10%;">Approved Limit</h3>
+          <h3 style="font-weight: bolder; font-size: x-large; margin-left: 10%;">5,00,000</h3>
         </div>
         <div class="col-3 col-sm col-md-3 col-xl-3" style="margin-bottom: 0px;">
-          <h3 style="font-weight: bold; font-size: x-large;">Used Limit</h3>
-          <h3 style="font-weight: bolder; font-size: xx-large;">2,00,00</h3>
+          <h3 style="font-weight: bold; font-size: medium;">Used Limit</h3>
+          <h3 style="font-weight: bolder; font-size: x-large;">2,00,00</h3>
         </div>
       </div>
       <div class="d-flex justify-content-center m-1">
